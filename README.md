@@ -1,8 +1,9 @@
 # 2023-group-11
 
-TEAM MEMBER: Julee, Zoe, Chris, John, Olly
+## TEAM MEMBER: Julee, Zoe, Chris, John, Olly
 
-TEAM PHOTO:
+## TEAM PHOTO:
+![groupphoto1](https://user-images.githubusercontent.com/115288676/215458306-d7feb007-dadf-4c71-a14a-e1210fc822bc.jpg)
 
 GAME LISTS:
 
