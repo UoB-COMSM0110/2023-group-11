@@ -1,11 +1,22 @@
+
 # 2023-group-11
 
-## TEAM MEMBER: Julee, Zoe, Chris, John, Olly
+## TEAM MEMBER: Zoe, Olly, Chris, John, Julee 
 
 ## TEAM PHOTO:
 ![Picture 1](https://user-images.githubusercontent.com/115288676/217528135-18efe5f2-5808-47d7-bfd9-91b4bb1e9c79.jpg)
 
-GAME LISTS:
+|      Name     |          Mail                      |   Github ID   | 
+| ------------- | ---------------------------------- | ------------- |
+|     Zoe       | hj22143@bristol.ac.uk              | @zoestart     |
+|     Olly      | oliver.reavley.2022@bristol.ac.uk  | @ollyreavley  |
+|     Chris     | ch17852@bristol.ac.uk              | @holographica |
+|     John      | xj22050@bristol.ac.uk              | @Eumenides-K  |
+|     Julee     | qm22092@bristol.ac.uk              | Julee2e       |
+
+## GAME:  Monaco GP
+
+## Video:
 
 
 
