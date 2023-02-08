@@ -11,7 +11,7 @@
 |     Zoe       | hj22143@bristol.ac.uk              | @zoestart     |
 |     Olly      | oliver.reavley.2022@bristol.ac.uk  | @ollyreavley  |
 |     Chris     | ch17852@bristol.ac.uk              | @holographica |
-|     John      | xj22050@bristol.ac.uk              | [@Eumenides-K]https://github.com/Eumenides-K  |
+|     John      | xj22050@bristol.ac.uk              | [@Eumenides-K](https://github.com/Eumenides-K)  |
 |     Julee     | qm22092@bristol.ac.uk              | Julee2e       |
 
 ## GAME:  Monaco GP
