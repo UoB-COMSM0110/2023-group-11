@@ -20,7 +20,7 @@
 https://user-images.githubusercontent.com/122840640/217564044-6e32a8e0-c8c5-4925-b7e2-73d058bcd863.mp4
 
 ## case diagram
-![Monaco GP use case (1)](https://user-images.githubusercontent.com/120577280/217570605-44285837-be51-4bce-95e4-0f5d67018cef.png)
+![Monaco GP use case (2)](https://user-images.githubusercontent.com/120577280/217571120-4cd5bd61-1d4c-4f83-a0c0-a51249bfb8ae.png)
 
 **Project Report**
 
