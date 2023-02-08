@@ -3,7 +3,7 @@
 ## TEAM MEMBER: Julee, Zoe, Chris, John, Olly
 
 ## TEAM PHOTO:
-![groupphoto1](https://user-images.githubusercontent.com/115288676/215458306-d7feb007-dadf-4c71-a14a-e1210fc822bc.jpg)
+![Picture 1](https://user-images.githubusercontent.com/115288676/217528135-18efe5f2-5808-47d7-bfd9-91b4bb1e9c79.jpg)
 
 GAME LISTS:
 
