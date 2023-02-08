@@ -8,11 +8,11 @@
 
 |      Name     |          Mail                      |   Github ID   | 
 | ------------- | ---------------------------------- | ------------- |
-|     Zoe       | hj22143@bristol.ac.uk              | @zoestart     |
-|     Olly      | oliver.reavley.2022@bristol.ac.uk  | @ollyreavley  |
-|     Chris     | ch17852@bristol.ac.uk              | @holographica |
+|     Zoe       | hj22143@bristol.ac.uk              | [@zoestart](https://github.com/Zoestart)        |
+|     Olly      | oliver.reavley.2022@bristol.ac.uk  | [@ollyreavley](https://github.com/ollyreavley)  |
+|     Chris     | ch17852@bristol.ac.uk              | [@holographica](https://github.com/holographica) |
 |     John      | xj22050@bristol.ac.uk              | [@Eumenides-K](https://github.com/Eumenides-K)  |
-|     Julee     | qm22092@bristol.ac.uk              | Julee2e       |
+|     Julee     | qm22092@bristol.ac.uk              | [@Julee2e](https://github.com/Julee2e)       |
 
 ## GAME:  Monaco GP
 
