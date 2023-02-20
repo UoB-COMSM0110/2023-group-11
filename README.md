@@ -16,6 +16,18 @@
 
 ## GAME:  Monaco GP
 
+## Challenge
+
+- computer (AI) racers
+- Global leader-board
+- computer spawns barriers and tanks/landmines
+- 2 player mode
+
+## Twist
+- keyboard change
+- 1 player control for map, 1 for AI things
+
+
 ## Video:
 https://user-images.githubusercontent.com/122840640/217564044-6e32a8e0-c8c5-4925-b7e2-73d058bcd863.mp4
 
