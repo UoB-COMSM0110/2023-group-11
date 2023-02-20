@@ -22,6 +22,10 @@ https://user-images.githubusercontent.com/122840640/217564044-6e32a8e0-c8c5-4925
 ## case diagram
 ![Monaco GP use case](https://user-images.githubusercontent.com/120577280/217571120-4cd5bd61-1d4c-4f83-a0c0-a51249bfb8ae.png)
 
+## class diagram
+![Diagram 2023-02-20 13-07-04](https://user-images.githubusercontent.com/47940328/220117499-82ef07ee-8c44-41a1-9b8c-6804946f6704.png)
+
+
 **Project Report**
 
 1. Team
