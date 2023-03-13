@@ -68,7 +68,7 @@ void setup(){
     pinkBot =loadImage("Data/pinkBot.png");
     blueBot = loadImage("Data/blueBot.png");
     player =loadImage("Data/greenBot.png");
-    trackImage = loadImage("/Users/chrishannon/Desktop/compsci/tb2/SWE/Game/trackimages/trackmerged.png");
+    trackImage = loadImage("Data/trackmerged.png");
     StartImage = loadImage("Data/Start.png");
     GameOver = loadImage("Data/GameOver.jpg");
     startNewGame();
@@ -212,10 +212,10 @@ void gamePlay() {
   } else if(game.getDifficulty() == 3){ //hard
     playerMovement = 10;
   }
+  background(255);
   
-  
-  // move track
-  trackPos += 0.5;
+   //move track
+  trackPos +=3;
   if (trackPos>ScreenSize_height){
     trackPos=0;
   }
@@ -225,7 +225,24 @@ void gamePlay() {
   image(trackImage, 0, trackPos,ScreenSize_width, ScreenSize_height);
   
   
+  int y = frameCount % trackImage.height;
+  copy(trackImage, 0, y, width, trackImage.height, 0, 0, width, trackImage.height);
+  int y2 = trackImage.height - y;
+  if (y2 < height) {
+    copy(trackImage, 0, 0, width, trackImage.height, 0, y2, width, trackImage.height);
+  }
   
+
+  
+  
+  // enemies should appear at random positions 
+  // player speed increases with difficulty
+  // starting countodwn before game starts
+  // add mines tanks etc
+  // mskr plsyer more obvious
+  // stop from going off sides
+  // change images
+
   
   
   
