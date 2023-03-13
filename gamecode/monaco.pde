@@ -1,17 +1,78 @@
-int ScreenSize_width = 450;
+int ScreenSize_width = 600;
 int ScreenSize_height = 800; 
 
-PImage bots, player, StartImage, trackImage, GameOver;
+PImage pinkBot, blueBot, player, StartImage, trackImage, GameOver;
 model game = new model();
+float trackPos=0;
+
+
+ boolean[] keyStates = new boolean[8];
+ final int left = 0;
+ final int up = 1;
+ final int right = 2;
+ final int down = 3;
+ final int aKey = 4;
+ final int wKey = 5;
+ final int dKey = 6;
+ final int sKey = 7;
+ 
+ 
+ void keyPressed(){
+   int keyVal = keyCode;
+   switch (keyVal){
+    case LEFT:
+      keyStates[left]=true;
+      break;
+    case UP:
+      keyStates[up]=true;
+      break;
+    case RIGHT:
+      keyStates[right]=true;
+      break;
+    case DOWN:
+      keyStates[down]=true;
+      break;
+    default:
+      break;
+   }
+ }
+ 
+ 
+ void keyReleased(){
+   int keyVal = keyCode;
+   switch (keyVal){
+    case LEFT:
+      keyStates[left]=false;
+      break;
+    case UP:
+      keyStates[up]=false;
+      break;
+    case RIGHT:
+      keyStates[right]=false;
+      break;
+    case DOWN:
+      keyStates[down]=false;
+      break;
+    default:
+      break;
+   }
+ }
+ 
+
+
+
+
 
 void setup(){
-    size(450,800);
-    bots =loadImage("Data/lilacBot.gif");
-    player =loadImage("Data/greenBot.gif");
-    trackImage = loadImage("Data/track.jpg");
+    size(600,800);
+    pinkBot =loadImage("Data/pinkBot.png");
+    blueBot = loadImage("Data/blueBot.png");
+    player =loadImage("Data/greenBot.png");
+    trackImage = loadImage("/Users/chrishannon/Desktop/compsci/tb2/SWE/Game/trackimages/trackmerged.png");
     StartImage = loadImage("Data/Start.png");
     GameOver = loadImage("Data/GameOver.jpg");
     startNewGame();
+    
 }
 
 void draw() {  
@@ -38,6 +99,8 @@ class model{
    float xPlayer; //for player
    float xBot2; //for bot 2
    float xBot3; //for bot 3
+   
+   // constructor
    model(){
 
    }
@@ -106,7 +169,7 @@ class model{
       }
    }
    
-      float getCarPositionX(int carNumber){
+    float getCarPositionX(int carNumber){
      if(carNumber == 0){
        return xBot0;
       } else if(carNumber == 1){
@@ -132,6 +195,8 @@ class model{
    }
 }
 
+
+
 void gamePlay() {
   int carWidth = 40; 
   int carHeight = 80;
@@ -139,45 +204,59 @@ void gamePlay() {
   int bot2Overtaken = 10;
   int bot3Overtaken = 10;
   noCursor();
-  float playerMovement = 2;
+  float playerMovement = 3;
   if(game.getDifficulty() == 1){ //easy
-    playerMovement = 2;
+    playerMovement = 3;
   } else if(game.getDifficulty() == 2){ //medium
-    playerMovement = 5;
+    playerMovement = 6;
   } else if(game.getDifficulty() == 3){ //hard
     playerMovement = 10;
   }
   
+  
+  // move track
+  trackPos += 0.5;
+  if (trackPos>ScreenSize_height){
+    trackPos=0;
+  }
+  
+  
   //track image load
-  image(trackImage, 0, 0,ScreenSize_width, ScreenSize_height);
+  image(trackImage, 0, trackPos,ScreenSize_width, ScreenSize_height);
+  
+  
+  
+  
+  
   
   //bot 0
-  image(bots, game.getCarPositionX(0), game.getCarPositionY(0), carWidth, carHeight);
+  image(blueBot, game.getCarPositionX(0), game.getCarPositionY(0), carWidth, carHeight);
   game.setCarPositionY(0, (game.getCarPositionY(0) - playerMovement/2));
   if(game.getCarPositionY(0)>800){
     game.setCarPositionY(0, 0);
   }
   
+  // car movement handler : https://stackoverflow.com/questions/7815137/processing-keypressed
+   if (keyStates[up]){
+     game.setCarPositionY(1, (game.getCarPositionY(1) - playerMovement));
+   }
+   if (keyStates[down]){
+     game.setCarPositionY(1, (game.getCarPositionY(1) + playerMovement/2));
+   }
+   if (keyStates[left]){
+     game.setCarPositionX(1, game.getCarPositionX(1) - 4);
+   }
+   if (keyStates[right]){
+     game.setCarPositionX(1, game.getCarPositionX(1) + 4);
+   }
+ 
+ 
+ 
+ 
+  
   // PLAYER CAR   
   image(player, game.getCarPositionX(1), game.getCarPositionY(1), carWidth, carHeight);  
-  if (keyPressed && key==CODED) {
-     switch (keyCode) {
-       case UP:
-         game.setCarPositionY(1, (game.getCarPositionY(1) - playerMovement));
-         break;
-       case DOWN:
-         game.setCarPositionY(1, (game.getCarPositionY(1) + playerMovement/2));
-         break;
-       case LEFT:
-         game.setCarPositionX(1, game.getCarPositionX(1) - 4);
-         break;
-       case RIGHT:
-         game.setCarPositionX(1, game.getCarPositionX(1) + 4);
-         break;
-       default:
-         break;
-     }
-  }
+ 
   if (game.getCarPositionY(1)<150){
     game.setCarPositionY(1, (game.getCarPositionY(1) + playerMovement - 1));
     if (game.getCarPositionY(1)<50){
@@ -190,14 +269,14 @@ void gamePlay() {
   }
            
   //bot 2
-  image(bots, game.getCarPositionX(2), game.getCarPositionY(2), carWidth, carHeight);
+  image(blueBot, game.getCarPositionX(2), game.getCarPositionY(2), carWidth, carHeight);
   game.setCarPositionY(2, (game.getCarPositionY(2) - playerMovement/3));
   if(game.getCarPositionY(2)>800){
     game.setCarPositionY(2, 800);
   }
            
   //bot 3
-  image(bots, game.getCarPositionX(3), game.getCarPositionY(3), carWidth, carHeight);
+  image(pinkBot, game.getCarPositionX(3), game.getCarPositionY(3), carWidth, carHeight);
   game.setCarPositionY(3, (game.getCarPositionY(3) - playerMovement + 1));
   if(game.getCarPositionY(3)>800){
     game.setCarPositionY(3, 800);
@@ -287,6 +366,9 @@ boolean crashDetector(int carNumber){
    fill(1);
    textSize(50);
    text(game.getScore(), 370, 590);  //Score
+  
+   
+   
    //New Game button
    fill(255);
    rect(restartButtonX, restartButtonY, restartButtonW, restartButtonH); //Button
